@@ -15,5 +15,11 @@ public class TriangleTest {
         Assertions.assertTrue(result);
     }
 
+    @Test
+    @DisplayName("Не валидные данные")
+    void incorrectValueThrowExeption() throws Exception {
+
+    }
+
 
 }
