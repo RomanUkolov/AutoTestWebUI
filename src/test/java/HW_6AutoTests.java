@@ -1,3 +1,4 @@
+import HW_6.LoggerHW7;
 import HW_6.NavigationBlock;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.qameta.allure.Feature;
@@ -6,6 +7,7 @@ import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.events.EventFiringDecorator;
 
 public class HW_6AutoTests {
     WebDriver driver;
@@ -18,7 +20,8 @@ public class HW_6AutoTests {
 
     @BeforeEach
     void initDriver() {
-        driver = new ChromeDriver();
+        driver = new EventFiringDecorator(new LoggerHW7()).decorate(new ChromeDriver());
+        //driver = new ChromeDriver();
         //navigationBlock = new NavigationBlock(driver);
     }
 
