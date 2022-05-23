@@ -1,5 +1,7 @@
 import HW_6.NavigationBlock;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -21,6 +23,8 @@ public class HW_6AutoTests {
     }
 
     @Test
+    @Feature("Карточка товара")
+    @Story("Произвольный поиск товара")
     void surfTest() {
         driver.get("http://automationpractice.com/index.php");
         new NavigationBlock(driver)

@@ -1,5 +1,6 @@
 package HW_6;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -16,8 +17,7 @@ public class DressesPage extends BaseView{
     @FindBy(xpath = SUMMER_DRESSES_XPATH_LOCATOR )
     private WebElement summerDressesElement;
 
-
-
+    @Step("Выбор категории'Summer Dresses'")
     public SummerDressPage clickSummerDressesElement() {
         webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(SUMMER_DRESSES_XPATH_LOCATOR)));
         summerDressesElement.click();
